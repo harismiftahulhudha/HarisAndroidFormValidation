@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorDefaultBackground">#FFFFFF</color>
+    <color name="colorDefaultBackgroundRow">#EFEFEF</color>
+    <color name="colorDefaultText">#9D9E9E</color>
+    <color name="colorDefaultRed">#FF0000</color>
+</resources>
