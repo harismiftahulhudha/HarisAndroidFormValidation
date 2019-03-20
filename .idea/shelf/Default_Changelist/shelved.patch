@@ -1,0 +1,16 @@
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<resources>\r\n    <color name=\"colorPrimary\">#008577</color>\r\n    <color name=\"colorPrimaryDark\">#00574B</color>\r\n    <color name=\"colorAccent\">#D81B60</color>\r\n</resources>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/colors.xml	(revision 74ba3d8c80b6915dfe103b8bc5830944124a3c3d)
++++ app/src/main/res/values/colors.xml	(date 1553046134064)
+@@ -3,4 +3,6 @@
+     <color name="colorPrimary">#008577</color>
+     <color name="colorPrimaryDark">#00574B</color>
+     <color name="colorAccent">#D81B60</color>
++    <color name="colorMintLeaf">#00b894</color>
++    <color name="colorSoothingBreeze">#b2bec3</color>
+ </resources>
