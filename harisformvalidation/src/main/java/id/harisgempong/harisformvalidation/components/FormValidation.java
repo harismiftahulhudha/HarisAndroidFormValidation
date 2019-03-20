@@ -45,29 +45,24 @@ public class FormValidation {
         this.textValidation = textValidation;
     }
 
-    public FormValidation setBackgroundColor(Object color) {
+    public void setBackgroundColor(Object color) {
         this.backgroundColor = color;
-        return this;
     }
 
-    public FormValidation setIconColor(Object color) {
+    public void setIconColor(Object color) {
         this.iconColor = color;
-        return this;
     }
 
-    public FormValidation setTextColor(Object color) {
+    public void setTextColor(Object color) {
         this.textColor = color;
-        return this;
     }
 
-    public FormValidation setBackgroundRowColor(Object color) {
+    public void setBackgroundRowColor(Object color) {
         this.backgroundRowColor = color;
-        return this;
     }
 
-    public FormValidation setTextRowColor(Object color) {
+    public void setTextRowColor(Object color) {
         this.textRowColor = color;
-        return this;
     }
 
     public void addRequest(Request request) {
