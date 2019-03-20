@@ -82,3 +82,7 @@ formValidation.setTextRowColor(getResources().getColor(R.color.colorSoothingBree
 | numeric         | The field under validation must be numeric.                                                                                                                           |
 | alpha_num       | The field under validation must be entirely alpha-numeric characters.                                                                                                 |
 | boolean         | The field under validation must be able to be cast as a boolean. Accepted input are `true`                                                                            |
+
+## Contact
+
+if you are interested in collaborating to develop this library. please contact me at `harismiftahulhudha@gmail.com`
