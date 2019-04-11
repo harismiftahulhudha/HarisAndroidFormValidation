@@ -31,7 +31,7 @@
             android:layout_below="@+id/icon"
             android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
-            android:text="@string/validasi_gagal"
+            android:text="@string/validationFailed"
             android:textAlignment="center"
             android:textColor="@color/colorDefaultRed"
             android:textSize="18sp" />

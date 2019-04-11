@@ -1,21 +1,36 @@
 <resources>
     <string name="app_name">HarisFormValidation</string>
     <string name="icon">icon</string>
-    <string name="validasi_gagal">Validasi Gagal</string>
+    <string name="validationFailed">Validasi Gagal</string>
 
 
     <!--Validation Text-->
-    <string name="success">validasi \"%1$s\" berhasil</string>
-    <string name="maxError">\"%1$s\" tidak boleh lebih dari %2$s</string>
-    <string name="minError">\"%1$s\" tidak boleh kurang dari %2$s</string>
+    <string name="maxError">\"%1$s\" tidak boleh lebih dari sama dengan %2$s</string>
+    <string name="minError">\"%1$s\" tidak boleh kurang dari sama dengan %2$s</string>
+    <string name="greaterError">\"%1$s\" tidak boleh lebih dari %2$s</string>
+    <string name="lessError">\"%1$s\" tidak boleh kurang dari %2$s</string>
     <string name="emailError">\"%1$s\" bukan email yang valid</string>
     <string name="maxLengthError">\"%1$s\" tidak boleh lebih dari %2$s karakter</string>
     <string name="minLengthError">\"%1$s\" tidak boleh kurang dari %2$s karakter</string>
+    <string name="stringError">\"%1$s\" harus berupa string</string>
     <string name="alphaError">\"%1$s\" harus berupa alphabet</string>
     <string name="numericError">\"%1$s\" harus berupa numerik</string>
+    <string name="positiveError">\"%1$s\" harus berupa angka positif</string>
+    <string name="negativeError">\"%1$s\" harus berupa angka negatif</string>
     <string name="alphaNumError">\"%1$s\" harus berupa numerik atau alphabet</string>
     <string name="booleanError">\"%1$s\" harus berupa boolean</string>
+    <string name="trooError">\"%1$s\" harus berupa true boolean</string>
+    <string name="folsError">\"%1$s\"harus berupa false boolean</string>
     <string name="errorNumberFormat">\"%1$s\" bukan nilai yang valid</string>
     <string name="errorRequired">\"%1$s\" tidak boleh kosong</string>
-    <string name="defaultValidation">\"%1$s\" tidak ada dalam aturan validasi</string>
+    <string name="tokenError">\"%1$s\" harus berupa token</string>
+    <string name="urlError">\"%1$s\" harus berupa url</string>
+    <string name="hexError">\"%1$s\" harus berupa hex</string>
+    <string name="lowercaseError">\"%1$s\" harus berupa huruf kecil</string>
+    <string name="uppercaseError">\"%1$s\" harus berupa huruf besar</string>
+    <string name="dateError">\"%1$s\" barus berupa tanggal</string>
+    <string name="valueRequiredError">nilai Dibutuhkan</string>
+    <string name="dateValueError">format yang salah</string>
+    <string name="betweenError">\"%1$s\" harus kurang dari %2$s dan lebih besar dari %3$s</string>
+    <string name="errorRequest">Anda belum membuat request validasi</string>
 </resources>
