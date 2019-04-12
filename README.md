@@ -73,6 +73,7 @@ formValidation.setTextRowColor(R.color.colorSoothingBreeze);
 ### Screenshot
 ##### Simple 
 <img src="https://github.com/harismiftahulhudha/HarisAndroidFormValidation/blob/v1.0.0/screenshot/simple%20example.PNG" alt="drawing" width="150"/>
+
 ##### Custom Color
 <img src="https://github.com/harismiftahulhudha/HarisAndroidFormValidation/blob/v1.0.0/screenshot/custom%20color%20example.PNG" alt="drawing" width="150"/>
 
