@@ -1,12 +1,12 @@
 package id.harisgempong.harisformvalidation.model;
 
 import id.harisgempong.harisformvalidation.components.ValidationHelper;
-import id.harisgempong.harisformvalidation.components.NewFormValidation;
+import id.harisgempong.harisformvalidation.components.FormValidation;
 import id.harisgempong.harisformvalidation.interfaces.TextValidation;
 
 public class BooleanValidation extends ValidationHelper {
 
-    private NewRequest request;
+    private Request request;
     private boolean isBlocked = false;
     private final String name;
 
@@ -16,7 +16,7 @@ public class BooleanValidation extends ValidationHelper {
         ERROR_FALSE
     }
 
-    BooleanValidation(NewRequest request, TextValidation textValidation) {
+    BooleanValidation(Request request, TextValidation textValidation) {
         super(request, textValidation);
         if (request.getInput() instanceof Boolean) {
             this.request = request;
@@ -25,11 +25,11 @@ public class BooleanValidation extends ValidationHelper {
             this.request = request;
             this.name = request.getName();
             if (request.getFilteredInput().isEmpty() || request.getInput().toString().equals("")) {
-                NewFormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
+                FormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
                 isBlocked = true;
             }
         } else {
-            NewFormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
+            FormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
             isBlocked = true;
             this.name = "";
         }

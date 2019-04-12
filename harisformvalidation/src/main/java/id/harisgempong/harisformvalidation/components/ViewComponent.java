@@ -107,14 +107,14 @@ public class ViewComponent {
 
         setColor(cardView, icon, text);
 
-        if (NewFormValidation.errors.size() > 4) {
+        if (FormValidation.errors.size() > 4) {
             cardView.setLayoutParams(new CardView.LayoutParams(CardView.LayoutParams.WRAP_CONTENT, 800));
         }
 
         RecyclerView recyclerView = dialog.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setHasFixedSize(true);
-        RequestAdapter adapter = new RequestAdapter(context, NewFormValidation.errors)
+        RequestAdapter adapter = new RequestAdapter(context, FormValidation.errors)
                 .setBackgroundRowColor(backgroundRowColor)
                 .setTextRowColor(textRowColor);
         recyclerView.setAdapter(adapter);

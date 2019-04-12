@@ -3,12 +3,12 @@ package id.harisgempong.harisformvalidation.model;
 import java.util.regex.Pattern;
 
 import id.harisgempong.harisformvalidation.components.ValidationHelper;
-import id.harisgempong.harisformvalidation.components.NewFormValidation;
+import id.harisgempong.harisformvalidation.components.FormValidation;
 import id.harisgempong.harisformvalidation.interfaces.TextValidation;
 
 public class NumberValidation extends ValidationHelper {
 
-    private NewRequest request;
+    private Request request;
     private boolean isBlocked = false;
     private final String input, name;
 
@@ -22,21 +22,21 @@ public class NumberValidation extends ValidationHelper {
         ERROR_NEGATIVE
     }
 
-    NumberValidation(NewRequest request, TextValidation textValidation) {
+    NumberValidation(Request request, TextValidation textValidation) {
         super(request, textValidation);
         if (request.getInput() instanceof String || request.getInput() instanceof Integer || request.getInput() instanceof Double || request.getInput() instanceof Float) {
             this.request = request;
             this.input = request.getInput().toString();
             this.name = request.getName();
             if (request.getFilteredInput().isEmpty()) {
-                NewFormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
+                FormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
                 isBlocked = true;
             }
         } else {
             this.request = request;
             this.input = "";
             this.name = "";
-            NewFormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
+            FormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
             isBlocked = true;
         }
     }

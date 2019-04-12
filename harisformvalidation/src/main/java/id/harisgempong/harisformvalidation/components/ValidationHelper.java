@@ -3,15 +3,15 @@ package id.harisgempong.harisformvalidation.components;
 import id.harisgempong.harisformvalidation.interfaces.TextValidation;
 import id.harisgempong.harisformvalidation.model.BooleanValidation;
 import id.harisgempong.harisformvalidation.model.DateValidation;
-import id.harisgempong.harisformvalidation.model.NewRequest;
+import id.harisgempong.harisformvalidation.model.Request;
 import id.harisgempong.harisformvalidation.model.NumberValidation;
 import id.harisgempong.harisformvalidation.model.StringValidation;
 
 public class ValidationHelper {
 
-    private final NewRequest request;
+    private final Request request;
     private final TextValidation textValidation;
-    protected ValidationHelper(NewRequest request, TextValidation textValidation) {
+    protected ValidationHelper(Request request, TextValidation textValidation) {
         this.request = request;
         this.textValidation = textValidation;
     }
@@ -135,14 +135,14 @@ public class ValidationHelper {
     }
 
     private void addError(String error) {
-        NewFormValidation.addErrors(error);
+        FormValidation.addErrors(error);
     }
 
     protected TextValidation getTextValidation() {
         return textValidation;
     }
 
-    public NewRequest validate() {
+    public Request validate() {
         return request;
     }
 }

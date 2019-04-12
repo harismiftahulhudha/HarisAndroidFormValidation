@@ -9,17 +9,17 @@ import java.util.List;
 import id.harisgempong.harisformvalidation.R;
 import id.harisgempong.harisformvalidation.interfaces.OnValidateListener;
 import id.harisgempong.harisformvalidation.interfaces.TextValidation;
-import id.harisgempong.harisformvalidation.model.NewRequest;
+import id.harisgempong.harisformvalidation.model.Request;
 
-public class NewFormValidation extends ViewComponent {
+public class FormValidation extends ViewComponent {
     private final Context context;
-    private List<NewRequest> requests;
+    private List<Request> requests;
     static ArrayList<String> errors;
     @SuppressLint("StaticFieldLeak")
     public static RulesText rulesText = null;
     public static TextValidation textValidation;
 
-    public NewFormValidation(Context context) {
+    public FormValidation(Context context) {
         super(context);
         this.requests = new ArrayList<>();
         errors = new ArrayList<>();
@@ -27,15 +27,15 @@ public class NewFormValidation extends ViewComponent {
         rulesText = new RulesText(context);
     }
 
-    public NewFormValidation(Context context, TextValidation textValidation){
+    public FormValidation(Context context, TextValidation textValidation){
         super(context);
         this.requests = new ArrayList<>();
         errors = new ArrayList<>();
         this.context = context;
-        NewFormValidation.textValidation = textValidation;
+        FormValidation.textValidation = textValidation;
     }
 
-    public void addRequest(NewRequest request) {
+    public void addRequest(Request request) {
         requests.add(request);
     }
 

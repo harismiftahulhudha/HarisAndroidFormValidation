@@ -8,11 +8,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import id.harisgempong.harisformvalidation.components.ValidationHelper;
-import id.harisgempong.harisformvalidation.components.NewFormValidation;
+import id.harisgempong.harisformvalidation.components.FormValidation;
 import id.harisgempong.harisformvalidation.interfaces.TextValidation;
 
 public class DateValidation extends ValidationHelper {
-    private NewRequest request;
+    private Request request;
     private boolean isBlocked = false;
     private final String input, name;
 
@@ -27,18 +27,18 @@ public class DateValidation extends ValidationHelper {
         ERROR_BETWEEN
     }
 
-    DateValidation(NewRequest request, TextValidation textValidation) {
+    DateValidation(Request request, TextValidation textValidation) {
         super(request, textValidation);
         if (request.getInput() instanceof String) {
             if (request.getFilteredInput().isEmpty()) {
-                NewFormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
+                FormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
                 isBlocked = true;
             }
             this.request = request;
             this.input = request.getInput().toString();
             this.name = request.getName();
         } else {
-            NewFormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
+            FormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
             isBlocked = true;
             this.input = "";
             this.name = "";
@@ -172,7 +172,7 @@ public class DateValidation extends ValidationHelper {
         return bool;
     }
     private boolean isDate(final String date) {
-        final String DATE_PATTERN = "((19|20)\\d\\d)[/.-](0?[1-9]|1[012])[/.-](0?[1-9]|[12][0-9]|3[01])";
+        final String DATE_PATTERN = "((19|20)\\d\\d)[-](0?[1-9]|1[012])[-](0?[1-9]|[12][0-9]|3[01])";
         Pattern pattern = Pattern.compile(DATE_PATTERN);
         Matcher matcher = pattern.matcher(date);
 

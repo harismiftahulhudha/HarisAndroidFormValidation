@@ -3,12 +3,12 @@ package id.harisgempong.harisformvalidation.model;
 import java.util.regex.Pattern;
 
 import id.harisgempong.harisformvalidation.components.ValidationHelper;
-import id.harisgempong.harisformvalidation.components.NewFormValidation;
+import id.harisgempong.harisformvalidation.components.FormValidation;
 import id.harisgempong.harisformvalidation.interfaces.TextValidation;
 
 public class StringValidation extends ValidationHelper {
 
-    private NewRequest request;
+    private Request request;
     private boolean isBlocked = false;
     private final String input, name;
 
@@ -26,21 +26,21 @@ public class StringValidation extends ValidationHelper {
         ERROR_UPPERCASE
     }
 
-    StringValidation(NewRequest request, TextValidation textValidation) {
+    StringValidation(Request request, TextValidation textValidation) {
         super(request, textValidation);
         if (request.getInput() instanceof String) {
             this.request = request;
             this.input = request.getInput().toString();
             this.name = request.getName();
             if (request.getFilteredInput().isEmpty()) {
-                NewFormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
+                FormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
                 isBlocked = true;
             }
         } else {
             this.request = request;
             this.input = "";
             this.name = "";
-            NewFormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
+            FormValidation.addErrors(getTextValidation().errorRequired(request.getName()));
             isBlocked = true;
         }
     }
@@ -54,7 +54,7 @@ public class StringValidation extends ValidationHelper {
         }
         return this;
     }
-    public StringValidation maxLength(int value) {
+    public StringValidation maxlength(int value) {
         if (!isBlocked) {
             if (input.length() > value) {
                 getErrorString(StringEnum.ERROR_MAX_LENGTH, value, name);
@@ -62,7 +62,7 @@ public class StringValidation extends ValidationHelper {
         }
         return this;
     }
-    public StringValidation minLength(int value) {
+    public StringValidation minlength(int value) {
         if (!isBlocked) {
             if (input.length() < value) {
                 getErrorString(StringEnum.ERROR_MIN_LENGTH, value, name);
@@ -129,20 +129,20 @@ public class StringValidation extends ValidationHelper {
         }
         return this;
     }
-    public StringValidation lowercase() {
-        if (!isBlocked) {
-            if (!input.equals(input.toLowerCase())) {
-                isBlocked = true;
-                getErrorString(StringEnum.ERROR_LOWERCASE, input, name);
-            }
-        }
-        return this;
-    }
     public StringValidation uppercase() {
         if (!isBlocked) {
             if (!input.equals(input.toUpperCase())) {
                 isBlocked = true;
                 getErrorString(StringEnum.ERROR_UPPERCASE, input, name);
+            }
+        }
+        return this;
+    }
+    public StringValidation lowercase() {
+        if (!isBlocked) {
+            if (!input.equals(input.toLowerCase())) {
+                isBlocked = true;
+                getErrorString(StringEnum.ERROR_LOWERCASE, input, name);
             }
         }
         return this;

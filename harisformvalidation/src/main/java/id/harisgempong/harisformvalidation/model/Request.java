@@ -1,20 +1,20 @@
 package id.harisgempong.harisformvalidation.model;
 
-import id.harisgempong.harisformvalidation.components.NewFormValidation;
+import id.harisgempong.harisformvalidation.components.FormValidation;
 import id.harisgempong.harisformvalidation.interfaces.TextValidation;
 
-public class NewRequest {
+public class Request {
     private final String name;
     private final Object input;
     private TextValidation textValidation;
 
-    public NewRequest(String name, Object input) {
+    public Request(String name, Object input) {
         this.name = name;
         this.input = input;
-        if (NewFormValidation.rulesText != null) {
-            textValidation = NewFormValidation.rulesText;
+        if (FormValidation.rulesText != null) {
+            textValidation = FormValidation.rulesText;
         } else {
-            textValidation = NewFormValidation.textValidation;
+            textValidation = FormValidation.textValidation;
         }
     }
 
@@ -34,7 +34,7 @@ public class NewRequest {
     protected String getName() {
         return name;
     }
-    protected Object getInput() {
+    Object getInput() {
         return input;
     }
 
