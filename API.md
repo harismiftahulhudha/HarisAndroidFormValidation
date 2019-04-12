@@ -1,13 +1,13 @@
 # 1.0.0 API Reference
 
-* number
+* [number](#number)
   * [number.max(value)](#number.max)
   * [number.min(value)](#number.min)
   * [number.greater(value)](#number.greater)
   * [number.less(value](#number.less)
   * [number.positive](#number.positive)
   * [number.negative](#number.negative)
-* string
+* [string](#string)
   * [string.maxlength(value)](#string.maxlength)
   * [string.minlength(value)](#string.minlength)
   * [string.email](#string.email)
@@ -18,17 +18,25 @@
   * [string.hex](#string.hex)
   * [string.uppercase](#string.uppercase)
   * [string.lowercase](#string.lowercase)
-* bool
+* [bool](#bool)
   * [bool.troo](#bool.troo)
   * [bool.fols](#bool.fols)
-* date
+* [date](#date)
   * [date.max](#date.max)
   * [date.min](#date.min)
   * [date.greater](#date.greater)
   * [date.less](#date.less)
   * [date.between](#date.between)
  
- 
+## <a name="number"></a>number
+#### Description
+The input must be number.
+#### Usage
+```
+formValidation.addRequest(new Request("math", 18).number().validate());
+```
+
+
 ## <a name="number.max"></a>number.max
 #### Description
 The number is lower or equal to the value that you set.
@@ -80,6 +88,14 @@ The number must be negative.
 #### Usage
 ```
 formValidation.addRequest(new Request("math", 24).number().negative().validate());
+```
+
+## <a name="string"></a>string
+#### Description
+The input must be string.
+#### Usage
+```
+formValidation.addRequest(new Request("math", 18).string().validate());
 ```
 
 
@@ -172,6 +188,14 @@ Requires the string value to be all lowercase.
 formValidation.addRequest(new Request("name", "haris miftahul hudha").string().uppercase().validate());
 ```
 
+## <a name="bool"></a>bool
+#### Description
+The input must be boolean.
+#### Usage
+```
+formValidation.addRequest(new Request("math", 18).bool().validate());
+```
+
 
 ## <a name="bool.troo"></a>bool.troo
 #### Description
@@ -188,6 +212,15 @@ Requires the boolean value to be false.
 #### Usage
 ```
 formValidation.addRequest(new Request("gender", false).bool().fols().validate());
+```
+
+
+## <a name="date"></a>date
+#### Description
+The input must be date.
+#### Usage
+```
+formValidation.addRequest(new Request("math", 18).date().validate());
 ```
 
 
