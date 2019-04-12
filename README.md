@@ -31,14 +31,14 @@ For full example, please refer to the `app`
 
 ### Standart Usage
 
-The standard way to start
+The standard way to start Take me to [pookie](#pookie)
 ```
 FormValidation formValidation = new FormValidation(this); // Initialize Class
 
 // Adding request to formValidation
-// Request object has 4 parameters : name, value, rules, required
-formValidation.addRequest(new Request("math", inputMath.getText().toString(), "max:30", true));
-formValidation.addRequest(new Request("english", inputEnglish.getText().toString(), "min:15|max:30", true));
+// Request object has 2 parameters : name, value
+formValidation.addRequest(new Request("math", inputMath.getText().toString()).number().max(20).validate());
+formValidation.addRequest(new Request("english", inputEnglish.getText().toString()).number().min(30).validate());
 
 // setOnValidateListener
 formValidation.setOnValidateListener(new OnValidateListener() {
@@ -86,3 +86,6 @@ formValidation.setTextRowColor(getResources().getColor(R.color.colorSoothingBree
 ## Contact
 
 if you are interested in collaborating to develop this library. please contact me at `harismiftahulhudha@gmail.com`
+
+### <a name="pookie"></a>Some heading
+
