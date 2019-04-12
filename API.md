@@ -8,8 +8,7 @@
   * [number.positive](#number.positive)
   * [number.negative](#number.negative)
  
-### <a name="number.max"></a>number.max
-#### Description
+## <a name="number.max"></a>number.max
 The number is higher than equal the value that you set
 #### Usage
 ```
