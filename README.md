@@ -69,7 +69,10 @@ formValidation.setTextColor("0984e3");
 formValidation.setBackgroundRowColor(R.color.colorMintLeaf);
 formValidation.setTextRowColor(R.color.colorSoothingBreeze);
 ```
-                                                                         |
+
+### Contact
+To see full documentation for the latest APIs. [look here](https://github.com/harismiftahulhudha/HarisAndroidFormValidation/blob/v1.0.0/API.md)
+
 ### Contact
 
 if you are interested in collaborating to develop this library. please contact me at `harismiftahulhudha@gmail.com`
