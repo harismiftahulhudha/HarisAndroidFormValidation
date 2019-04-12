@@ -31,7 +31,7 @@ For full example, please refer to the `app`
 
 ### Standart Usage
 
-The standard way to start Take me to [pookie](#pookie)
+The standard way to start
 ```
 FormValidation formValidation = new FormValidation(this); // Initialize Class
 
@@ -86,6 +86,4 @@ formValidation.setTextRowColor(getResources().getColor(R.color.colorSoothingBree
 ## Contact
 
 if you are interested in collaborating to develop this library. please contact me at `harismiftahulhudha@gmail.com`
-
-### <a name="pookie"></a>Some heading
 
