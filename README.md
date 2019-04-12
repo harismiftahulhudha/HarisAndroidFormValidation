@@ -83,4 +83,3 @@ To see full documentation for the latest APIs. [look here](https://github.com/ha
 ### Contact
 
 if you are interested in collaborating to develop this library. please contact me at `harismiftahulhudha@gmail.com`
-
