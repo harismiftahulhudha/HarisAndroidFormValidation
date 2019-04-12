@@ -66,24 +66,11 @@ FormValidation formValidation = new FormValidation(this, new CustomTextValidatio
 formValidation.setBackgroundColor("74b9ff");
 formValidation.setIconColor("0984e3");
 formValidation.setTextColor("0984e3");
-formValidation.setBackgroundRowColor(getResources().getColor(R.color.colorMintLeaf));
-formValidation.setTextRowColor(getResources().getColor(R.color.colorSoothingBreeze));
+formValidation.setBackgroundRowColor(R.color.colorMintLeaf);
+formValidation.setTextRowColor(R.color.colorSoothingBreeze);
 ```
-
-### Table Rules
-| Rules           | Description   |
-| :-------------: | ------------- |
-| max             | The field under validation must be less than or equal to a maximum value. Strings, numerics, arrays, and files are evaluated in the same fashion as the `size` rule.  |
-| min             | The field under validation must have a minimum value. Strings, numerics, arrays, and files are evaluated in the same fashion as the `size` rule.                      |
-| email           | The field under validation must be formatted as an e-mail address.                                                                                                    |
-| maxlength       | The field under validation must be less than or equal to a maximum value. Strings are evaluated in the same fashion as the `length` of the characters                 |
-| minlength       | The field under validation must have a minimum value. Strings are evaluated in the same fashion as the `length` of the characters                                     |
-| alpha           | The field under validation must be entirely alphabetic characters.                                                                                                    |
-| numeric         | The field under validation must be numeric.                                                                                                                           |
-| alpha_num       | The field under validation must be entirely alpha-numeric characters.                                                                                                 |
-| boolean         | The field under validation must be able to be cast as a boolean. Accepted input are `true`                                                                            |
-
-## Contact
+                                                                         |
+### Contact
 
 if you are interested in collaborating to develop this library. please contact me at `harismiftahulhudha@gmail.com`
 
