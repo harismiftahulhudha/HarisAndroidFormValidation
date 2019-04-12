@@ -17,6 +17,7 @@ The number is lower or equal to the value that you set.
 formValidation.addRequest(new Request("math", 18).number().max(20).validate());
 ```
 
+
 ## <a name="number.min"></a>number.min
 #### Description
 The number is higher or equal to the value that you set.
@@ -24,6 +25,7 @@ The number is higher or equal to the value that you set.
 ```
 formValidation.addRequest(new Request("math", 43).number().min(20).validate());
 ```
+
 
 ## <a name="number.greater"></a>number.greater
 #### Description
@@ -33,6 +35,7 @@ The number is lower than the value that you set.
 formValidation.addRequest(new Request("math", 18).number().greater(20).validate());
 ```
 
+
 ## <a name="number.less"></a>number.less
 #### Description
 The number is higher than the value that you set.
@@ -40,6 +43,7 @@ The number is higher than the value that you set.
 ```
 formValidation.addRequest(new Request("math", 24).number().less(20).validate());
 ```
+
 
 ## <a name="number.positive"></a>number.positive
 #### Description
