@@ -160,7 +160,7 @@ formValidation.addRequest(new Request("color", "#000000").string().hex().validat
 Requires the string value to be all uppercase.
 #### Usage
 ```
-formValidation.addRequest(new Request("color", "HARIS MIFTAHUL HUDHA").string().uppercase().validate());
+formValidation.addRequest(new Request("name", "HARIS MIFTAHUL HUDHA").string().uppercase().validate());
 ```
 
 
@@ -169,14 +169,73 @@ formValidation.addRequest(new Request("color", "HARIS MIFTAHUL HUDHA").string().
 Requires the string value to be all lowercase.
 #### Usage
 ```
-formValidation.addRequest(new Request("color", "haris miftahul hudha").string().uppercase().validate());
+formValidation.addRequest(new Request("name", "haris miftahul hudha").string().uppercase().validate());
 ```
 
 
-## <a name="bool.troo"></a>`bool.troo`
+## <a name="bool.troo"></a>bool.troo
 #### Description
-Requires the string value to be all lowercase.
+Requires the boolean value to be true.
 #### Usage
 ```
-formValidation.addRequest(new Request("color", "haris miftahul hudha").string().uppercase().validate());
+formValidation.addRequest(new Request("gender", true).bool().troo().validate());
+```
+
+
+## <a name="bool.fols"></a>bool.fols
+#### Description
+Requires the boolean value to be false.
+#### Usage
+```
+formValidation.addRequest(new Request("gender", false).bool().fols().validate());
+```
+
+
+## <a name="date.max"></a>date.max
+#### Description
+The date is lower or equal to the value that you set.
+#### Usage
+```
+// the date format is yyyy-MM-dd
+formValidation.addRequest(new Request("birthday", "2018-10-10").date().max("2018-12-10").validate());
+```
+
+
+## <a name="date.min"></a>date.min
+#### Description
+The date is higher or equal to the value that you set.
+#### Usage
+```
+// the date format is yyyy-MM-dd
+formValidation.addRequest(new Request("birthday", "2018-12-10").date().min("2018-10-10").validate());
+```
+
+
+## <a name="date.greater"></a>date.greater
+#### Description
+The date is lower than the value that you set.
+#### Usage
+```
+// the date format is yyyy-MM-dd
+formValidation.addRequest(new Request("birthday", "2018-10-10").date().greater("2018-12-10").validate());
+```
+
+
+## <a name="date.less"></a>date.less
+#### Description
+The date is higher than the value that you set.
+#### Usage
+```
+// the date format is yyyy-MM-dd
+formValidation.addRequest(new Request("birthday", "2018-12-10").date().min("2018-10-10").validate());
+```
+
+
+## <a name="date.between"></a>date.between
+#### Description
+The date is between the value1 and the value2 that you set.
+#### Usage
+```
+// the date format is yyyy-MM-dd
+formValidation.addRequest(new Request("work", "2018-11-10").date().between("2018-10-10", "2018-12-10").validate());
 ```
