@@ -49,6 +49,8 @@ public class FormValidation extends ViewComponent {
         } else {
             if (errors.size() > 0) {
                 onValidateListener.onValidate(false, errors, this);
+            } else {
+                onValidateListener.onValidate(true, errors, this);
             }
         }
     }
