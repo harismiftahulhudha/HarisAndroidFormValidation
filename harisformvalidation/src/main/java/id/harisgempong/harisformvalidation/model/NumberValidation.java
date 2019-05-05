@@ -19,7 +19,8 @@ public class NumberValidation extends ValidationHelper {
         ERROR_GREATER,
         ERROR_LESS,
         ERROR_POSITIVE,
-        ERROR_NEGATIVE
+        ERROR_NEGATIVE,
+        ERROR_COMPARE
     }
 
     NumberValidation(Request request, TextValidation textValidation) {
@@ -101,6 +102,15 @@ public class NumberValidation extends ValidationHelper {
             if (Double.valueOf(input) > 0.0) {
                 isBlocked = true;
                 getErrorNumberValidation(NumberEnum.ERROR_NEGATIVE, name);
+            }
+        }
+        return this;
+    }
+    public NumberValidation compare(double value) {
+        if (!isBlocked) {
+            if (Double.valueOf(input) != value) {
+                isBlocked = true;
+                getErrorNumberValidation(NumberEnum.ERROR_COMPARE, value, name);
             }
         }
         return this;

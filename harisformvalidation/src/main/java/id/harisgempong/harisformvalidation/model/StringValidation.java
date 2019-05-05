@@ -23,7 +23,9 @@ public class StringValidation extends ValidationHelper {
         ERROR_URL,
         ERROR_HEX,
         ERROR_LOWERCASE,
-        ERROR_UPPERCASE
+        ERROR_UPPERCASE,
+        ERROR_INDO_NUMBER,
+        ERROR_COMPARE
     }
 
     StringValidation(Request request, TextValidation textValidation) {
@@ -57,6 +59,7 @@ public class StringValidation extends ValidationHelper {
     public StringValidation maxlength(int value) {
         if (!isBlocked) {
             if (input.length() > value) {
+                isBlocked = true;
                 getErrorString(StringEnum.ERROR_MAX_LENGTH, value, name);
             }
         }
@@ -65,6 +68,7 @@ public class StringValidation extends ValidationHelper {
     public StringValidation minlength(int value) {
         if (!isBlocked) {
             if (input.length() < value) {
+                isBlocked = true;
                 getErrorString(StringEnum.ERROR_MIN_LENGTH, value, name);
             }
         }
@@ -75,6 +79,7 @@ public class StringValidation extends ValidationHelper {
             String EMAIL_PATTERN = "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
             Pattern pattern = Pattern.compile(EMAIL_PATTERN);
             if (!pattern.matcher(input).matches()) {
+                isBlocked = true;
                 getErrorString(StringEnum.ERROR_EMAIL, input, name);
             }
         }
@@ -143,6 +148,44 @@ public class StringValidation extends ValidationHelper {
             if (!input.equals(input.toLowerCase())) {
                 isBlocked = true;
                 getErrorString(StringEnum.ERROR_LOWERCASE, input, name);
+            }
+        }
+        return this;
+    }
+    public StringValidation compare(String value) {
+        if (!isBlocked) {
+            if (!input.equals(value)) {
+                isBlocked = true;
+                getErrorString(StringEnum.ERROR_COMPARE, value, name);
+            }
+        }
+        return this;
+    }
+    public StringValidation indoNumber() {
+        if (!isBlocked) {
+            String number;
+            String replace_slash = input.replace("-", "");
+            String replace_plus = replace_slash.replace("+62", "62");
+            String spasi = replace_plus.replace("62 ", "");
+            if (spasi.length() > 2) {
+                String cek3 = spasi.charAt(0) + "" + spasi.charAt(1) + spasi.charAt(2) + "";
+                String cek2 = spasi.charAt(0) + "" + spasi.charAt(1);
+                if (cek3.equals("628")) {
+                    number = "8" + spasi.substring(3);
+                } else if (cek2.equals("08")) {
+                    number = "8" + spasi.substring(2);
+                } else if (cek2.equals("62")) {
+                    number = spasi.substring(2);
+                } else {
+                    number = spasi;
+                }
+            } else {
+                number = spasi;
+            }
+            String finalNumber = "62" + number;
+            if (!input.equals(finalNumber)) {
+                isBlocked = true;
+                getErrorString(StringEnum.ERROR_INDO_NUMBER, input, name);
             }
         }
         return this;

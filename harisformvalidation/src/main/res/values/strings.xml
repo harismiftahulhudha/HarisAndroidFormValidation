@@ -28,6 +28,8 @@
     <string name="hexError">\"%1$s\" must be hex</string>
     <string name="lowercaseError">\"%1$s\" must be lowercase</string>
     <string name="uppercaseError">\"%1$s\" must be uppercase</string>
+    <string name="indoNumberError">\"%1$s\" must be valid indonesia number</string>
+    <string name="compareError">\"%1$s\" must be equal \"%2$s\"</string>
     <string name="dateError">\"%1$s\" must be date</string>
     <string name="valueRequiredError">value is required</string>
     <string name="dateValueError">wrong format</string>

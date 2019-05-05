@@ -129,6 +129,16 @@ public class RulesText implements TextValidation {
     }
 
     @Override
+    public String indoNumberError(String name) {
+        return context.getResources().getString(R.string.indoNumberError, name);
+    }
+
+    @Override
+    public String compareError(String name, String value) {
+        return context.getResources().getString(R.string.compareError, name, value);
+    }
+
+    @Override
     public String dateError(String name) {
         return context.getResources().getString(R.string.dateError, name);
     }

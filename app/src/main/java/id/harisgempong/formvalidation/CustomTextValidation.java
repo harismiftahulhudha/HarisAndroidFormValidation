@@ -120,6 +120,16 @@ public class CustomTextValidation implements TextValidation {
     }
 
     @Override
+    public String indoNumberError(String name) {
+        return null;
+    }
+
+    @Override
+    public String compareError(String name, String value) {
+        return null;
+    }
+
+    @Override
     public String dateError(String name) {
         return null;
     }

@@ -42,6 +42,9 @@ public class ValidationHelper {
             case ERROR_LESS:
                 addError(textValidation.lessError(name, String.valueOf(value)));
                 break;
+            case ERROR_COMPARE:
+                addError(textValidation.compareError(name, String.valueOf(value)));
+                break;
         }
     }
 
@@ -73,6 +76,12 @@ public class ValidationHelper {
                 break;
             case ERROR_UPPERCASE:
                 addError(textValidation.uppercaseError(name));
+                break;
+            case ERROR_INDO_NUMBER:
+                addError(textValidation.indoNumberError(name));
+                break;
+            case ERROR_COMPARE:
+                addError(textValidation.compareError(name, input));
                 break;
         }
     }

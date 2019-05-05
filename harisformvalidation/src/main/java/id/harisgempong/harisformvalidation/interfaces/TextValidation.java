@@ -24,6 +24,8 @@ public interface TextValidation {
     String hexError(String name);
     String lowercaseError(String name);
     String uppercaseError(String name);
+    String indoNumberError(String name);
+    String compareError(String name, String value);
     String dateError(String name);
     String valueRequiredError();
     String dateValueError();

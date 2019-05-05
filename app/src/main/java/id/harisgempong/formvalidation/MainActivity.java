@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Adding request to formValidation
         // Request object has 2 parameters : name, value
-        formValidation.addRequest(new Request("math", inputMath.getText().toString()).number().max(20).validate());
-        formValidation.addRequest(new Request("english", inputEnglish.getText().toString()).number().min(30).validate());
+        formValidation.addRequest(new Request("math", inputMath.getText().toString()).number().compare(20).validate());
+        formValidation.addRequest(new Request("english", inputEnglish.getText().toString()).string().indoNumber().validate());
 
         // setOnValidateListener
         formValidation.setOnValidateListener(new OnValidateListener() {
